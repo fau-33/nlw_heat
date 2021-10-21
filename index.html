@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Flávio Félix - DoWhile 2022</title>
+    <title>Flávio Félix - DoWhile 2021</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,36 +17,68 @@
           </span>
           <img src="https://lorempixel.com/185/185/people/" alt="Foto Pessoal"> 
         </div>
-        <h1>Flávio Félix</h1>
-        <a href="https://www.instagram.com/">
+        <h1 id="userName">Flávio Félix</h1>
+        <a href="https://github.com/fau-33" target="_blank">
           <img src="images/github.svg" alt="Ícone do github">
           flaviofelix</a>
 
           <p>An instructor focused on helping pople start programming for web</p>
 
-          <ul>
-            <li>
-              <a href="https://www.youtube.com/maykbrito">
-                <img src="images/youtube.svg" alt="Ícone do youtube" target="_blank">
+          <ul id="socialLinks">
+            <li class="youtube">
+              <a 
+              href="https://www.youtube.com/maykbrito"
+              target="_blank">
+                <img src="images/youtube.svg" alt="Ícone do youtube">
               </a>
             </li>
-            <li>
-              <a href="https://www.facebook.com/maykbrito">
-                <img src="images/facebook.svg" alt="Ícone do facebook" target="_blank">
+            <li class="facebook">
+              <a 
+              href="https://www.facebook.com/maykbrito"
+              target="_blank">
+                <img src="images/facebook.svg" alt="Ícone do facebook">
               </a>
             </li>
-            <li>
-              <a href="https://www.instagram.com/maykbrito">
-                <img src="images/instagram.svg" alt="Ícone do instagram" target="_blank" />
+            <li class="instagram">
+              <a 
+              href="https://www.instagram.com/maykbrito"
+              target="_blank"
+              >
+                <img src="images/instagram.svg" alt="Ícone do instagram"/>
               </a>
             </li>
-            <li>
-              <a href="https://www.twitter.com/maykbrito">
-                <img src="images/twitter.svg" alt="Ícone do twitter" target="_blank">
+            <li class="twitter">
+              <a 
+              href="https://www.twitter.com/maykbrito"
+              target="_blank">
+                <img src="images/twitter.svg" alt="Ícone do twitter">
               </a>
             </li>
           </ul>
       </div>
     </main>
+
+    <script>
+      
+      const LinksSocialMedia = {
+        github: "jackeliny",
+        youtube: "jakelinygracielly",
+        facebook: "maykbrito",
+        instagram: "jakeliny.gracielly",
+        twitter: "jakelinytec"
+      }
+
+      function changeSocialMedia() {
+        for(let li of socialLinks.children) {
+          const social = li.getAttribute('class');
+          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`;
+
+          alert(li.children[0].href);
+        }
+      }
+
+      changeSocialMedia();
+      
+    </script>
   </body>
 </html>
