@@ -15,14 +15,14 @@
           <span>
             <img src="images/build.svg" alt="Selo Rocketseat">
           </span>
-          <img src="https://lorempixel.com/185/185/people/" alt="Foto Pessoal"> 
+          <img id="userImage" src="https://lorempixel.com/185/185/people/" alt="Foto Pessoal"> 
         </div>
-        <h1 id="userName">Flávio Félix</h1>
-        <a href="https://github.com/fau-33" target="_blank">
+        <h1 id="userName">Mayk Brito</h1>
+        <a id="userLink" href="https://github.com/fau-33" target="_blank">
           <img src="images/github.svg" alt="Ícone do github">
-          flaviofelix</a>
+          <span id="userLogin">maykbrito</span></a>
 
-          <p>An instructor focused on helping pople start programming for web</p>
+          <p id="userBio">An instructor focused on helping pople start programming for web</p>
 
           <ul id="socialLinks">
             <li class="youtube">
@@ -58,27 +58,6 @@
       </div>
     </main>
 
-    <script>
-      
-      const LinksSocialMedia = {
-        github: "jackeliny",
-        youtube: "jakelinygracielly",
-        facebook: "maykbrito",
-        instagram: "jakeliny.gracielly",
-        twitter: "jakelinytec"
-      }
-
-      function changeSocialMedia() {
-        for(let li of socialLinks.children) {
-          const social = li.getAttribute('class');
-          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`;
-
-          alert(li.children[0].href);
-        }
-      }
-
-      changeSocialMedia();
-      
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
